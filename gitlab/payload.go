@@ -38,6 +38,7 @@ type IssueEventPayload struct {
 	Repository       Repository       `json:"repository"`
 	ObjectAttributes ObjectAttributes `json:"object_attributes"`
 	Assignee         Assignee         `json:"assignee"`
+	Assignees        []Assignee       `json:"assignees"`
 	Changes          Changes          `json:"changes"`
 }
 
@@ -56,6 +57,7 @@ type MergeRequestEventPayload struct {
 	Changes          Changes          `json:"changes"`
 	Project          Project          `json:"project"`
 	Repository       Repository       `json:"repository"`
+	Assignees        []Assignee       `json:"assignees"`
 }
 
 // PushEventPayload contains the information for GitLab's push event
